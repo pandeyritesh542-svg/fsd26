@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Your Name</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A simple portfolio webpage." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Your Name</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="avatar">YN</div>
+        <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+        <p class="lead">I build modern web applications and delightful user experiences.</p>
+        <p class="cta">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>I'm a web developer with a passion for creating accessible and performant web applications. I enjoy working across the stack and solving product problems with simple, pragmatic solutions.</p>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="card">
+          <div class="card-media"></div>
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p>Short description of the project, the tech used, and the outcome.</p>
+            <p class="card-actions"><a class="link" href="#">View</a> · <a class="link" href="#">Source</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media"></div>
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p>Short description of the project, the tech used, and the outcome.</p>
+            <p class="card-actions"><a class="link" href="#">View</a> · <a class="link" href="#">Source</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media"></div>
+          <div class="card-body">
+            <h3>Project Three</h3>
+            <p>Short description of the project, the tech used, and the outcome.</p>
+            <p class="card-actions"><a class="link" href="#">View</a> · <a class="link" href="#">Source</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript / TypeScript</li>
+        <li>React / Vue</li>
+        <li>Node.js</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>If you'd like to work together or just say hi, drop a message:</p>
+      <form class="contact-form" action="#" method="post" onsubmit="alert('This form is a demo — wire up a backend to send messages.'); return false;">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <p><button class="btn" type="submit">Send message</button></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name — Built with ❤️</p>
+      <p class="socials"><a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small script for year and mobile nav
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
